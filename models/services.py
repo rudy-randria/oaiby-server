@@ -23,7 +23,7 @@ class ServiceStatus(str, Enum):
 
 class ServiceManageRequest(BaseModel):
     """Requête de gestion d'un service"""
-    service_name: str = Field(..., regex=r'^[a-zA-Z0-9\-_.]+$')
+    service_name: str = Field(..., pattern=r'^[a-zA-Z0-9\-_.]+$')
     action: ServiceAction
 
     @validator('service_name')
@@ -57,7 +57,7 @@ class ServiceActionResponse(BaseModel):
 
 class LogRequest(BaseModel):
     """Requête pour récupérer des logs"""
-    service_name: str = Field(..., regex=r'^[a-zA-Z0-9\-_.]+$')
+    service_name: str = Field(..., pattern=r'^[a-zA-Z0-9\-_.]+$')
     lines: int = Field(default=50, ge=1, le=1000)
     follow: bool = False
     since: Optional[str] = None  # Format: "2023-01-01 12:00:00"

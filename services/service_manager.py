@@ -329,7 +329,7 @@ class ServiceManager:
     def _is_valid_service_name(service_name: str) -> bool:
         """Valide le nom d'un service"""
         # Vérifier le format du nom de service
-        if not re.match(r'^[a-zA-Z0-9\-_.@]+, service_name):
+        if not re.match(r'^[a-zA-Z0-9\-_.@]+$', service_name):
             return False
         
         # Vérifier la longueur

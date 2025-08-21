@@ -330,7 +330,7 @@ async def ping_host(host: str):
         import re
         
         # Valider l'hôte (sécurité)
-        if not re.match(r'^[a-zA-Z0-9\-\.]+, host):
+        if not re.match(r'^[a-zA-Z0-9\-\.]+', host):
             raise HTTPException(status_code=400, detail="Nom d'hôte invalide")
         
         # Exécuter ping
