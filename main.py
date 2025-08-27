@@ -29,27 +29,38 @@ def create_app():
 
     # Import routers (si ils existent)
     try:
+        from routers.auth import router as auth_router
+        app.include_router(auth_router)
+    except ImportError as e:
+        print(f"⚠️  Erreur d'import des routers: {e}")
+        pass
+
+    try:
         from routers.system import router as system_router
         app.include_router(system_router)
-    except ImportError:
+    except ImportError as e:
+        print(f"⚠️  Erreur d'import des routers: {e}")
         pass
 
     try:
         from routers.hardware import router as hardware_router
         app.include_router(hardware_router)
-    except ImportError:
+    except ImportError as e:
+        print(f"⚠️  Erreur d'import des routers: {e}")
         pass
 
     try:
         from routers.network import router as network_router
         app.include_router(network_router)
-    except ImportError:
+    except ImportError as e:
+        print(f"⚠️  Erreur d'import des routers: {e}")
         pass
 
     try:
         from routers.services import router as services_router
         app.include_router(services_router)
-    except ImportError:
+    except ImportError as e:
+        print(f"⚠️  Erreur d'import des routers: {e}")
         pass
 
     # Routes de base

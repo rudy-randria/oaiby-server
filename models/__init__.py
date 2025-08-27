@@ -1,3 +1,18 @@
+"""Modèles Pydantic pour l'API VPS Manager"""
+
+# Imports des modèles d'authentification
+from .auth import (
+    LoginRequest,
+    LoginResponse,
+    UserInfo,
+    TokenData,
+    LogoutResponse,
+    ErrorResponse,
+    CreateUserRequest,
+    UpdateUserRequest,
+    ChangePasswordRequest
+)
+
 # Imports des modèles système
 from .system import (
     SystemInfo,
@@ -38,6 +53,16 @@ from .services import (
 
 # Export de tous les modèles
 __all__ = [
+    # Auth
+    "LoginRequest",
+    "LoginResponse",
+    "UserInfo",
+    "TokenData",
+    "LogoutResponse",
+    "ErrorResponse",
+    "CreateUserRequest",
+    "UpdateUserRequest",
+    "ChangePasswordRequest",
     # System
     "SystemInfo",
     "SystemLoad", 
