@@ -1,0 +1,37 @@
+{
+    "1": {
+        "user_id": 1,
+        "username": "fano",
+        "email": "fano@example.com",
+        "full_name": "Fano",
+        "face_images": [
+            "face_database\\user_1\\fano_1.jpg"
+        ],
+        "image_count": 1,
+        "registered_at": "2025-10-05T05:39:24.210426"
+    },
+    "2": {
+        "user_id": 2,
+        "username": "rudy",
+        "email": "rudy@example.com",
+        "full_name": "Rudy",
+        "face_images": [
+            "face_database\\user_2\\rudy_1.jpg",
+            "face_database\\user_2\\rudy_2.jpg",
+            "face_database\\user_2\\rudy_3.jpg"
+        ],
+        "image_count": 3,
+        "registered_at": "2025-10-05T05:39:25.353773"
+    },
+    "3": {
+        "user_id": 3,
+        "username": "steph",
+        "email": "steph@example.com",
+        "full_name": "Steph",
+        "face_images": [
+            "face_database\\user_3\\steph_1.jpg"
+        ],
+        "image_count": 1,
+        "registered_at": "2025-10-05T05:39:25.387159"
+    }
+}

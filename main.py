@@ -63,6 +63,13 @@ def create_app():
         print(f"⚠️  Erreur d'import des routers: {e}")
         pass
 
+    try:
+        from routers.face_recognition import router as face_recognition_router
+        app.include_router(face_recognition_router)
+    except ImportError as e:
+        print(f"Erreur d'import des routers: {e}")
+        pass
+
     # Routes de base
     @app.get("/")
     async def root():
